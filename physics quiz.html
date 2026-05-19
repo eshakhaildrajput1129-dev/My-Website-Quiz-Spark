@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+
+<head>
+
+    <title>Physics Quiz</title>
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+
+        body{
+            font-family: 'Inter', system-ui, sans-serif;
+            background:#F9F7F3;
+            color:#1E2A3E;
+        }
+
+        .nav{
+            display:flex;
+            justify-content:center;
+            background:#1E2A3E;
+            padding:20px;
+            box-shadow:0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .logo{
+            color:#e67e22;
+            font-size:30px;
+            font-weight:bold;
+        }
+
+        .logo span{
+            color:white;
+        }
+
+        .quiz-box{
+            max-width:700px;
+            margin:auto;
+            background:white;
+            padding:30px;
+            border-radius:15px;
+            box-shadow:0 0 10px rgba(0,0,0,0.1);
+            margin-top:30px;
+        }
+
+        .question{
+            border:2px solid grey;
+            margin:20px 0;
+            padding:20px;
+            border-radius:12px;
+            background-color:rgb(240, 223, 158);
+            box-shadow:0px 0px 5px;
+        }
+
+        .btn{
+            display:flex;
+            justify-content:center;
+        }
+
+        button{
+            padding:12px 20px;
+            border:none;
+            background:#1E2A3E;
+            color:white;
+            border-radius:8px;
+            cursor:pointer;
+            margin-top:20px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<header>
+
+    <div class="nav">
+        <div class="logo">Physics<span>Quiz</span></div>
+    </div>
+
+</header>
+
+<div class="quiz-box">
+
+    <div class="question">
+        <h3>Q1. The SI unit of electric current is:</h3>
+
+        <input type="radio" name="q1"> Volt <br>
+        <input type="radio" name="q1" value="correct"> Ampere <br>
+        <input type="radio" name="q1"> Ohm <br>
+        <input type="radio" name="q1"> Watt <br>
+    </div>
+
+    <div class="question">
+        <h3>Q2. Which device is used to measure electric current?</h3>
+
+        <input type="radio" name="q2"> Voltmeter <br>
+        <input type="radio" name="q2"> Thermometer <br>
+        <input type="radio" name="q2" value="correct"> Ammeter <br>
+        <input type="radio" name="q2"> Barometer <br>
+    </div>
+
+    <div class="question">
+        <h3>Q3. Opposite poles of magnets always:</h3>
+
+        <input type="radio" name="q3"> Repel <br>
+        <input type="radio" name="q3" value="correct"> Attract <br>
+        <input type="radio" name="q3"> Disappear <br>
+        <input type="radio" name="q3"> Rotate <br>
+    </div>
+
+    <div class="question">
+        <h3>Q4. Heat naturally flows from:</h3>
+
+        <input type="radio" name="q4"> Cold body to hot body <br>
+        <input type="radio" name="q4" value="correct"> Hot body to cold body <br>
+        <input type="radio" name="q4"> Equal temperature <br>
+        <input type="radio" name="q4"> Vacuum to solid <br>
+    </div>
+
+    <div class="question">
+        <h3>Q5. The SI unit of temperature is:</h3>
+
+        <input type="radio" name="q5"> Celsius <br>
+        <input type="radio" name="q5"> Fahrenheit <br>
+        <input type="radio" name="q5" value="correct"> Kelvin <br>
+        <input type="radio" name="q5"> Joule
+    </div>
+
+    <div class="question">
+        <h3>Q6. Which law states that energy cannot be created or destroyed?</h3>
+
+        <input type="radio" name="q6"> Newton's First Law <br>
+        <input type="radio" name="q6"> Law of Gravitation <br>
+        <input type="radio" name="q6" value="correct"> First Law of Thermodynamics <br>
+        <input type="radio" name="q6"> Ohm's Law
+    </div>
+
+    <div class="question">
+        <h3>Q7. Newton’s First Law is also called the law of:</h3>
+
+        <input type="radio" name="q7"> Momentum <br>
+        <input type="radio" name="q7" value="correct"> Inertia <br>
+        <input type="radio" name="q7"> Acceleration <br>
+        <input type="radio" name="q7"> Gravity <br>
+    </div>
+
+    <div class="question">
+        <h3>Q8. For every action, there is an equal and opposite reaction. This is:</h3>
+
+        <input type="radio" name="q8"> Newton's First Law <br>
+        <input type="radio" name="q8"> Newton's Second Law <br>
+        <input type="radio" name="q8" value="correct"> Newton’s Third Law <br>
+        <input type="radio" name="q8"> Law of Energy <br>
+    </div>
+
+    <div class="btn">
+        <button type="button" onclick="checkQuiz()">Submit</button>
+    </div>
+
+</div>
+
+<script>
+
+function checkQuiz(){
+
+    let answers = document.querySelectorAll('input[value="correct"]:checked').length;
+
+    let alloption = document.querySelectorAll('input[type="radio"]');
+
+    alloption.forEach((option)=>{
+        option.disabled = true;
+    });
+
+    alert("Your Score: " + answers + "/8");
+
+    let correctAnswers = document.querySelectorAll('input[value="correct"]');
+
+    correctAnswers.forEach((correct)=>{
+
+        let text = document.createElement("span");
+
+        text.innerHTML = " ✅ Correct Answer";
+
+        text.style.color = "green";
+        text.style.fontWeight = "bold";
+        text.style.marginLeft = "10px";
+
+        correct.parentElement.appendChild(text);
+
+    });
+
+}
+
+</script>
+
+</body>
+</html>

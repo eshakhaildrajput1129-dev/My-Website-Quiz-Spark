@@ -1,0 +1,186 @@
+
+<!DOCTYPE html>
+
+<head>
+    
+    <title>English quiz</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+         body {
+            font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background: #F9F7F3;
+            color: #1E2A3E;
+            line-height: 1.5;
+        }
+        .nav{
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            background-color: #1E2A3E;
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            
+            
+            
+        }
+         .logo {
+            color: #e67e22;;
+            font-size: 1.5rem;
+            font-weight: bold;
+            letter-spacing: -0.5px;
+        }
+
+        .logo span {
+            color: #F9F7F3;
+        }
+        
+        .question{
+        margin:20px 0;
+        padding:20px;
+        border:2px solid #1E2A3E;
+        border-radius:12px;
+        background:#f4f4f4;
+        }
+    .btn{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    }
+    button{
+    margin: 0px 10px;
+    align-items: center;
+    padding:12px 20px;
+    border:none;
+    background:#1E2A3E;
+    color:white;
+    border-radius:8px;
+    cursor:pointer;
+    margin-top:20px;
+}
+
+
+    .quiz-box{
+        max-width:700px;
+        margin:auto;
+        background:white;
+        padding:30px;
+        border-radius:15px;
+        box-shadow:0 0 10px rgba(0,0,0,0.1);
+    }
+    </style>
+</head>
+<body>
+<header>
+        
+    <div class="nav"> 
+        <div class="logo">English<span>Quiz</span>  </div>
+     <img class="background">
+ </header>
+<form> 
+ <div class="quiz-box">
+
+    <div class="question">
+        <h3>Q1. Identify the noun in the sentence:
+            The children played in the garden.</h3>
+
+        <input type="radio" name="q1"> Played <br>
+        <input type="radio" name="q1" value="correct"> garden <br>
+        <input type="radio" name="q1"> in <br>
+        <input type="radio" name="q1"> the <br>
+    </div>
+
+    <div class="question">
+        <h3>Q2. Which word is a pronoun?</h3>
+
+        <input type="radio" name="q2"> Quickly <br>
+        <input type="radio" name="q2" value="correct"> she <br>
+        <input type="radio" name="q2"> brought <br>
+        <input type="radio" name="q2"> run
+    </div>
+
+    <div class="question">
+        <h3>Q3. Identify the verb in the sentence:
+            Ali writes neatly.</h3>
+
+        <input type="radio" name="q3"> Ali <br>
+        <input type="radio" name="q3"> neatly <br>
+        <input type="radio" name="q3" value="correct"> writes <br>
+        <input type="radio" name="q3"> the <br>
+    </div>
+
+    <div class="question">
+        <h3>Q4. Which word is an adjective?</h3>
+
+        <input type="radio" name="q4"> Happiness <br>
+        <input type="radio" name="q4"> Slowly <br>
+        <input type="radio" name="q4" value="correct"> beautiful <br>
+        <input type="radio" name="q4"> dance <br>
+    </div>
+
+    <div class="question">
+        <h3>Q5. “The wind whispered through the trees.”
+            Which figure of speech is used?</h3>
+
+        <input type="radio" name="q5"> Simile <br>
+        <input type="radio" name="q5" value="correct"> Personification <br>
+        <input type="radio" name="q5"> Hyperbole <br>
+        <input type="radio" name="q5"> Irony
+    </div>
+
+    <div class="question">
+        <h3>Q6. “He is as brave as a lion.”
+            This is an example of:</h3>
+
+        <input type="radio" name="q6"> Metaphor <br>
+        <input type="radio" name="q6" value="correct"> Simile <br>
+        <input type="radio" name="q6"> Oxymoron <br>
+        <input type="radio" name="q6"> Alliteration
+    </div>
+
+    <div class="question">
+        <h3>Q7. Repetition of beginning consonant sounds is called:</h3>
+
+        <input type="radio" name="q7"> Symbolism <br>
+        <input type="radio" name="q7" value="correct"> Alliteration <br>
+        <input type="radio" name="q7"> Imagery <br>
+        <input type="radio" name="q7"> Irony <br>
+    </div>
+
+    <div class="question">
+        <h3>Q8. “The classroom was a zoo.”
+            Which literary device is used?</h3>
+
+        <input type="radio" name="q8"> Simile <br>
+        <input type="radio" name="q8" value="correct"> Metaphor <br>
+        <input type="radio" name="q8"> Personification <br>
+        <input type="radio" name="q8"> Onomatopoeia
+    </div>
+    <div class="btn">
+        <button type="button" onclick="checkQuiz()">Submit</button>
+    </div>
+</div>
+</form>
+</body>
+<script>
+function checkQuiz(){
+
+    let answers = document.querySelectorAll('input[value="correct"]:checked').length;
+    let wrong = 8 - answers;
+    let alloption=document.querySelectorAll('input[type="radio"]')
+
+    alloption.forEach((option)=>{
+         option.disabled = true;
+    })
+    alert("Your Score: " + answers + "/8");
+
+}
+
+</script>
+</html>

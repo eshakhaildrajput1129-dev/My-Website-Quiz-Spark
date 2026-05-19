@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Subjects</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background: #F9F7F3;
+            color: #1E2A3E;
+            line-height: 1.5;
+        }
+
+        /* NAVBAR */
+
+        .nav{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #1E2A3E;
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .logo {
+            color: #e67e22;
+            font-size: 1.5rem;
+            font-weight: bold;
+            letter-spacing: -0.5px;
+        }
+
+        .logo span {
+            color: #F9F7F3;
+        }
+
+        .list{
+            list-style: none;
+            display: flex;
+            gap: 40px;
+     }
+     ul{
+        display: flex;
+         gap: 50px;
+         padding-right: 100px;
+        
+     }
+
+        .nav a{
+            color:#F9F7F3;
+            text-decoration: none;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        .nav a:hover{
+            color: #e67e22;
+        }
+
+        /* SUBJECT SECTION */
+
+        .subjects{
+            padding: 60px 40px;
+            text-align: center;
+        }
+
+        .subjects h1{
+            font-size: 40px;
+            margin-bottom: 40px;
+        }
+
+        .subject-container{
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            
+            
+        }
+
+        .subject-box{
+            width: 220px;
+            
+            padding: 30px 20px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            transition: 0.3s;box-shadow: 0px 0px 4px gray;
+        }
+
+        .subject-box:hover{
+            transform: translateY(-8px);
+        }
+
+        .subject-box h2{
+            margin-bottom: 15px;
+            color: #1E2A3E;
+        }
+
+        .subject-box button{
+            padding: 10px 20px;
+            border: none;
+            background: #e67e22;
+            color: white;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: 0.3s;
+            width: 100px;
+        }
+
+        .subject-box button:hover{
+            /* background: #cf6d17; */
+            
+        background-color: aliceblue;
+        color: #e67e22;
+     }
+        
+     .btn{
+        display: inline-block;
+        padding: 10px 20px;
+         background-color: #2563eb;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  border: none;
+  font-size: 16px;
+  font-family: inherit;
+  cursor: pointer;
+  text-align: center;
+  background-color: #cf6d17;
+     }
+     .btn:hover{
+        background-color: aliceblue;
+        color: #e67e22;
+     }
+
+    </style>
+</head>
+<body>
+
+ <header>
+        
+    <div class="nav"> 
+        <div class="logo">Quiz<span>Spark</span>  </div>
+     <img class="background">
+    <ul>   
+       <li class="list"><a href="index.html">Home</a></li>
+      <li class="list"><a href="Prepration.html">Prepration</a></li>
+      <li class="list"><a href="quiz.html">Quiz</a></li>
+    </ul>
+ </header>
+    <!-- SUBJECT OPTIONS -->
+
+    <section class="subjects">
+
+        <h1>Select Your Quiz Subject</h1>
+
+        <div class="subject-container">
+
+            <div class="subject-box">
+                <h2>English</h2>
+                
+             <a href="english quiz.html" class="btn">Start Quiz</a>
+            </div>
+
+            <div class="subject-box">
+                <h2>Computer</h2>
+                <a href="computer quiz.html">
+                 <button type="submit"class="subject-box button">Start Quiz
+                       
+                </button> 
+               </a>
+            </div>
+
+            <div class="subject-box">
+                <h2>Physics</h2>
+                <a href="physics quiz.html" class="btn"> Start Quiz</a>
+                <!-- <div class="subject-box">
+    <h2>Physics</h2>
+
+    <a href="physics-quiz.html">
+        <button type="button" class="button">
+            Start Quiz
+        </button>
+    </a> -->
+                
+            </div>
+
+            <div class="subject-box">
+                <h2>Chemistry</h2>
+                <a href="Chemistry.html" class="btn">Start Quiz</a>
+            </div>
+
+            <div class="subject-box">
+                <h2>Biology</h2>
+                <a href="biologyquiz.html" class="btn"  >Start Quiz</a>
+            </div>
+
+            <div class="subject-box">
+                <h2>Psychology</h2>
+                
+                <a href="psychology.html" class="btn">Start Quiz</a>
+            </div>
+
+        </div>
+
+    </section>
+
+</body>
+</html>
